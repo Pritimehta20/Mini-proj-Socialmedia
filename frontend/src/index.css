@@ -1,0 +1,4 @@
+/* src/index.css */
+@import url('./Pages/Register.css');
+@import url('./Pages/Login.css');
+@import url('./Pages/Dashboard.css');
