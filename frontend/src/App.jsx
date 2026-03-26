@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './index.css'
-import Register from './Pages/register';
-import Login from './Pages/login';
-import Dashboard from './Pages/Dashboard';
+import Register from './Pages/register.jsx';
+import Login from './Pages/login.jsx';
+import Dashboard from './Pages/Dashboard.jsx';
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
