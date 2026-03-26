@@ -7,13 +7,13 @@ if(!process.env.MONGO_URI){
         "Please provide MONGODB_URI in the .env file"
     )
 }
-async function dbconnect(){
+async function dbconnect() {
     try {
-        await mongoose.connect(process.env.MONGO_URI)
-        console.log("connected DB")
+        await mongoose.connect(process.env.MONGO_URI);
+        console.log("✅ MongoDB connected successfully");
     } catch (error) {
-        console.log("Mongodb connect error",error)
-        process.exit(1)
+        console.error("❌ MongoDB connection error:", error.message);
+        // Don't exit process; let Render try again
     }
 }
 console.log("Connecting to MongoDB:", process.env.MONGO_URI);
