@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './index.css'
-import Register from './Pages/register.jsx';
-import Login from './Pages/login.jsx';
+import Register from './Pages/Register.jsx';
+import Login from './Pages/Login.jsx';
 import Dashboard from './Pages/Dashboard.jsx';
 
 const PrivateRoute = ({ children }) => {
