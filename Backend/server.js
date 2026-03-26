@@ -9,7 +9,12 @@ const app = express();
 dbconnect();
 
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: process.env.CLIENT_URL,  //  frontend URL
+  credentials: true
+}));
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something went wrong!");
