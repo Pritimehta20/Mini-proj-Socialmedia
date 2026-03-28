@@ -21,6 +21,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something went wrong!");
 });
+app.options("/*", cors());
 
 app.get("/", (req, res) => {
   res.send("API is running...");
